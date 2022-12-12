@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total Marks</title>
+</head>
+<body>
+    <center>
+        <form>
+            <label for="name">Name : </label>
+            <input type="text" id="name" name="name"><br><br>
+            <label for="english">English Marks : </label>
+            <input type="text" id="english" name="english" value="0"><br><br>
+            <label for="math">Math Marks : </label>
+            <input type="text" id="math" name="math" value="0"><br><br>
+            <input type="button" onclick="findTotal()" value="Total Marks">
+            <span id="total"></span>
+        </form>
+    </center>
+    <script>
+        function findTotal() {
+            var num1 = parseFloat(document.getElementById("english").value);
+            var num2 = parseFloat(document.getElementById("math").value);
+            document.getElementById("total").innerHTML = (num1 + num2);
+        }
+    </script>
+</body>
+</html>
